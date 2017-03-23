@@ -1,1 +1,15 @@
 theme: jekyll-theme-cayman
+# permalink: pretty
+collections:
+  packets:
+    output: true
+    permalink: /packets/:title/
+defaults:
+  - scope:
+      path: ""
+      type: packets
+    values:
+      layout: "default_packets"
+sass:
+  style: compressed
+  sass_dir: _sass
