@@ -5,3 +5,9 @@ type: home
 
 <h1>Home Page for Site</h1>
 
+
+<h2>Packets! We don't need no stinkin' packets.</h2>
+
+{% for packet in site.packets %}
+  <h5>{{ packet.title }}</h5>
+{% endfor %}
