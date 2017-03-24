@@ -34,7 +34,7 @@ type: home
 <h2>Statixxxxc! We don't need no stinkin' static.</h2>
 
 {% for packet in site.static_files %}
-  {% if packet.path contains "static_packets/"}
+  {% if packet.path contains "static_packets/" %}
   	<h6>
   		<a
         target="_blank"
