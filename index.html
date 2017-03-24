@@ -34,11 +34,13 @@ type: home
 <h2>Static! We don't need no stinkin' static.</h2>
 
 {% for packet in site.static_files %}
-	<h6>
-		<a
-      target="_blank"
-      href="{{site.baseurl}}{{ packet.path }}">
-			{{ packet.path }}
-		</a>
-	</h6>
+  {% if packet.path contains "static_packets/"}
+  	<h6>
+  		<a
+        target="_blank"
+        href="{{site.baseurl}}{{ packet.path }}">
+  			{{ packet.path }}
+  		</a>
+  	</h6>
+  {% endif %}
 {% endfor %}
