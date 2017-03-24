@@ -1,13 +1,12 @@
 theme: jekyll-theme-cayman
 # permalink: pretty
-collections:
-  packets:
-    output: true
-    permalink: /packets/:title/
+# collections:
+#   packets:
+#     output: true
+#     permalink: /packets/:title/
 defaults:
   - scope:
-      path: ""
-      type: packets
+      path: "_packets"
     values:
       layout: "default_packets"
 sass:

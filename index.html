@@ -9,5 +9,5 @@ type: home
 <h2>Packets! We don't need no stinkin' packets.</h2>
 
 {% for packet in site.static_files %}
-  <h5>{{ packet.title }}</h5>
+  <h6>{{ packet.title }}: {{ packet.path }}</h6>
 {% endfor %}
