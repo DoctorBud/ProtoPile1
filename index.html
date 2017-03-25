@@ -36,7 +36,8 @@ type: home
 
 <ul>
 {% for packet in site.static_files %}
-  {% if packet.path contains "static_packets/" %}
+  {% if packet.path contains "static_packets/" and
+        (packet.extname == '.yaml' || packet.extname == '.json') %}
   	<li>
   		<a
         target="_blank"
