@@ -3,12 +3,11 @@ layout: raw
 ---
 [
 {%- for packet in site.static_files -%}
-  {%- if packet.path contains "static_packets/" and
-        (packet.extname == '.yaml' || packet.extname == '.json') -%}
+  {%- if packet.path contains "static_packets/" and (packet.extname == '.yaml' || packet.extname == '.json') -%}
     {
-      url: "{{site.baseurl}}{{ packet.path }}",
+      url: "{{ site.baseurl }}{{ packet.path }}",
       path: "{{ packet.path }}",
-      name: "{{packet.name}}"
+      name: "{{ packet.name }}"
     },
   {%- endif -%}
 {%- endfor -%}
