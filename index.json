@@ -1,0 +1,35 @@
+---
+layout: default
+type: home
+---
+
+<h1>JSON for Pile</h1>
+
+<h2>Using the _data/packets Jekyll Mechanism</h2>
+
+<ul>
+{% for packet_hash in site.data.packets %}
+{% assign packet_name = packet_hash[0] %}
+{% assign packet = packet_hash[1] %}
+  <li>{{ packet_name }}</li>
+{% endfor %}
+</ul>
+
+
+<h2>Phenopackets in this Pile</h2>
+
+<ul>
+{% for packet in site.static_files %}
+  {% if packet.path contains "static_packets/" and
+        (packet.extname == '.yaml' || packet.extname == '.json') %}
+  	<li>
+  		<a
+        target="_blank"
+        href="{{site.baseurl}}{{ packet.path }}">
+  			{{ packet.path }}
+  		</a>
+  	</li>
+  {% endif %}
+{% endfor %}
+</ul>
+
