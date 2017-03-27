@@ -11,10 +11,17 @@
     <link rel="stylesheet" href="{{site.baseurl}}/assets/css/main.css" media="screen" type="text/css">
   </head>
   <body>
-    <div class="container-fluid">
+    <div class="container">
       <div class="row">
-        <h1 class="project-name">{{ site.title | default: site.github.repository_name }}</h1>
-        <h2 class="project-tagline">{{ site.description | default: site.github.project_tagline }}</h2>
+        <div class="col-xs-12">
+          <div class="jumbotron">
+            <h1 class="project-name">{{ site.title | default: site.github.repository_name }}</h1>
+            <h2 class="project-tagline">{{ site.description | default: site.github.project_tagline }}</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
         <div class="col-xs-12">
           <div class="well">
             <img
