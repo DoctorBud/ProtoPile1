@@ -6,5 +6,6 @@ layout: raw
   url: "{{site.baseurl}}{{ packet.path }}",
   path: "{{ packet.path }}",
   name: "{{packet.name}}"
-},{% endif %}{% endfor %}
+},
+{% endif %}{% endfor %}
 ]
