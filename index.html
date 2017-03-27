@@ -5,6 +5,19 @@ type: home
 
 <h1>Home Page for Site</h1>
 
+<h2>Using the _data/packets Jekyll Mechanism</h2>
+
+
+<ul>
+{% for packet_hash in site.data.packets %}
+{% assign packet_name = packet_hash[0] %}
+{% assign packet = packet_hash[1] %}
+  <li>{{ packet_name }}</li>
+{% endfor %}
+</ul>
+
+
+
 {% comment %}
   <h2>Collections! We don't need no stinkin' collections.</h2>
 
