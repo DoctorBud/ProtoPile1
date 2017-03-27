@@ -16,24 +16,30 @@
 {% endcomment %}
   </head>
   <body>
-    <section class="page-header">
-      <h1 class="project-name">{{ site.title | default: site.github.repository_name }}</h1>
-      <h2 class="project-tagline">{{ site.description | default: site.github.project_tagline }}</h2>
-      <img
-        src="assets/img/PhenoPackets_Logo.png"
-        class="img-responsive"
-        alt="Responsive image">
-    </section>
+    <div class="container-fluid">
+      <section class="page-header">
+        <h1 class="project-name">{{ site.title | default: site.github.repository_name }}</h1>
+        <h2 class="project-tagline">{{ site.description | default: site.github.project_tagline }}</h2>
+        <div class="row">
+          <div class="col-xs-12">
+            <img
+              src="assets/img/PhenoPackets_Logo.png"
+              class="img-responsive"
+              alt="Responsive image">
+          </div>
+        </div>
+      </section>
 
-    <section class="main-content">
-      {{ content }}
+      <section class="main-content">
+        {{ content }}
 
-      <footer class="site-footer">
-        {% if site.github.is_project_page %}
-          <span class="site-footer-owner"><a href="{{ site.github.repository_url }}">{{ site.github.repository_name }}</a> is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>.</span>
-        {% endif %}
-      </footer>
-    </section>
+        <footer class="site-footer">
+          {% if site.github.is_project_page %}
+            <span class="site-footer-owner"><a href="{{ site.github.repository_url }}">{{ site.github.repository_name }}</a> is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>.</span>
+          {% endif %}
+        </footer>
+      </section>
+    </div>
 
     {% if site.google_analytics %}
       <script type="text/javascript">
