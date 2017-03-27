@@ -7,5 +7,4 @@ layout: raw
   path: "{{ packet.path }}",
   name: "{{packet.name}}"
 },
-{% endif %}{% endfor %}
-]
+{% endif %}{% endfor %}]
