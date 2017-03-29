@@ -1,3 +1,6 @@
+---
+---
+
 schema: phenopacket-level-1
 comment: This is an example phenopacket containing one disease and two associations
 ontologies:

@@ -1,22 +1,21 @@
 theme: jekyll-theme-cayman
-# permalink: pretty
 ## The collections feature will not work without front-matter on the packets, and that
 ## is an unnecessary requirement for packet submitters, so we won't use collections and will
 ## instead use the static_files feature.
 #
 # collections:
-#   packets:
+#   packetsCollection:
 #     output: true
-#     permalink: /packets/:title/
+#     permalink: /packetsCollection/:title/
 # defaults:
 #   - scope:
-#       path: "_packets"
+#       path: "_packetsCollection"
 #     values:
 #       layout: "default_packets"
 #       packet: true
 defaults:
   - scope:
-      path: "static_packets"
+      path: "packets"
     values:
       layout: "default_packets"
       packet: true
@@ -25,4 +24,3 @@ sass:
   sass_dir: _sass
 gems:
   - safe_yaml
-

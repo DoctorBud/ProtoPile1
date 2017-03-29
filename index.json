@@ -2,7 +2,7 @@
 layout: raw
 ---
 [
-{% for packet in site.static_files %}{% if packet.path contains "static_packets/" and (packet.extname == '.yaml' || packet.extname == '.json') %}{
+{% for packet in site.static_files %}{% if packet.path contains "packets/" and (packet.extname == '.yaml' || packet.extname == '.json') %}{
   url: "{{site.baseurl}}{{ packet.path }}",
   path: "{{ packet.path }}",
   name: "{{packet.name}}"
