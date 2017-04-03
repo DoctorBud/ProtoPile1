@@ -5,7 +5,7 @@ theme: jekyll-theme-cayman
 #
 collections:
   packetsCollection:
-    output: true
+    # output: true
     permalink: /packetsCollection/:title:output_ext
 defaults:
   - scope:
