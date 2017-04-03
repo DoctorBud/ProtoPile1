@@ -9,7 +9,7 @@ collections:
     permalink: /packetsCollection/:title/
 defaults:
   - scope:
-      path: "_packetsCollection"
+      path: "packetsCollection"
     values:
       layout: "default_packets"
       packet: true
