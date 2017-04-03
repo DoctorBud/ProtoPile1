@@ -1,5 +1,8 @@
 ---
+metafoo: true
+somevar: hello
 ---
+
 
 # Puvabanditsin, S., February, M., Shaik, T., Kashyap, A., Bruno, C., & Mehta, R. (2015). 2q31.1 microdeletion syndrome: case report and literature review. Clinical Case Reports, 3(6), 357–360. http://doi.org/10.1002/ccr3.260
 schema: journal-example-level-1
