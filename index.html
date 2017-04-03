@@ -92,15 +92,20 @@ type: home
 
 <ul>
 {% for packet in site.static_files %}
-  {% if packet.path contains "packets/" and
-        (packet.extname == '.yaml' || packet.extname == '.json') %}
-  	<li>
-  		<a
-        target="_blank"
-        href="{{site.baseurl}}{{ packet.path }}">
-  			{{ packet.path }}
-  		</a>
-  	</li>
+  {% if packet.path contains "packets/" %}
+    {% if packet.extname == '.yaml' || packet.extname == '.json' %}
+    	<li>
+    		<a
+          target="_blank"
+          href="{{site.baseurl}}{{ packet.path }}">
+    			{{ packet.path }}
+    		</a>
+    	</li>
+    {% else %}
+      <li>
+        {{ packet.path }} / {{ packet.extname }}
+      </li>
+    {% endif %}
   {% endif %}
 {% endfor %}
 </ul>
