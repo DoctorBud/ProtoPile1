@@ -14,7 +14,7 @@ type: home
 {% assign packet = packet_hash[1] %}
   <li>
     <h6>{{ packet_name }}</h6>
-    <pre>{{ packet }}</pre>
+    <pre>{{ packet | jsonify }}</pre>
   </li>
 {% endfor %}
 </ul>
