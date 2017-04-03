@@ -6,7 +6,7 @@ theme: jekyll-theme-cayman
 collections:
   packetsCollection:
     output: true
-    output_ext: .html
+    # output_ext: .html
     permalink: /packetsCollection/:title:output_ext
 defaults:
   - scope:
@@ -22,5 +22,5 @@ defaults:
 sass:
   style: compressed
   sass_dir: _sass
-gems:
-  - safe_yaml
+# gems:
+#   - safe_yaml
