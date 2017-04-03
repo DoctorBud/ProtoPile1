@@ -7,14 +7,31 @@ type: home
 <h1>Home Page for Site</h1>
 
 <h2>Using the _data/packets Jekyll Mechanism</h2>
+<p>
+  Jekyll allows data files such as CSV, JSON, YAML to be loaded and made available
+  to the rendering engine, where the loaded can be rendered or even computed upon.
 
+  The downside to this feature is that incorrectly formatted data files will cause
+  the build to break; so that a single error can prevent any updates from being seen.
+
+<a
+  href="https://jekyllrb.com/docs/datafiles/"
+  target="_blank">
+  Jekyll documentation about Data Files
+</a>
+</p>
 <ul>
 {% for packet_hash in site.data.packets %}
 {% assign packet_name = packet_hash[0] %}
 {% assign packet = packet_hash[1] %}
   <li>
     <h6>{{ packet_name }}</h6>
-    <pre>{{ packet | jsonify }}</pre>
+    <h6>{{ packet.ontologies }}</h6>
+    <h6>{{ packet.phenotype_profile }}</h6>
+    <h6>{{ packet.schema }}</h6>
+    <h6>{{ packet.entities }}</h6>
+    <h6>{{ packet.comment }}</h6>
+    <pre>{{ packet }}</pre>
   </li>
 {% endfor %}
 </ul>
