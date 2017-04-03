@@ -25,12 +25,12 @@ type: home
 {% assign packet_name = packet_hash[0] %}
 {% assign packet = packet_hash[1] %}
   <li>
-    <h6>{{ packet_name }}</h6>
-    <h6>{{ packet.ontologies }}</h6>
-    <h6>{{ packet.phenotype_profile }}</h6>
-    <h6>{{ packet.schema }}</h6>
-    <h6>{{ packet.entities }}</h6>
-    <h6>{{ packet.comment }}</h6>
+    <h6>name: {{ packet_name }}</h6>
+    <h6>schema: {{ packet.schema }}</h6>
+    <h6>comment: {{ packet.comment }}</h6>
+    <h6>ontologies: {{ packet.ontologies }}</h6>
+    <h6>phenotype_profile: {{ packet.phenotype_profile }}</h6>
+    <h6>entities: {{ packet.entities }}</h6>
     <pre>{{ packet }}</pre>
   </li>
 {% endfor %}
