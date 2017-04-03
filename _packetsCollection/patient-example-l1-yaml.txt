@@ -1,4 +1,5 @@
 ---
+metafoo: bar
 ---
 
 schema: phenopacket-level-1

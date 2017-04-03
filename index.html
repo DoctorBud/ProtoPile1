@@ -4,9 +4,7 @@ type: home
 ---
 
 
-<h1>Home Page for Site</h1>
-
-<h2>Using the _data/packets Jekyll Mechanism</h2>
+<h2>Using the Jekyll Data Files Feature</h2>
 <p>
   Jekyll allows data files such as CSV, JSON, YAML to be loaded and made available
   to the rendering engine, where the loaded can be rendered or even computed upon.
@@ -20,6 +18,7 @@ type: home
   Jekyll documentation about Data Files
 </a>
 </p>
+
 <ul>
 {% for packet_hash in site.data.packets %}
 {% assign packet_name = packet_hash[0] %}
@@ -31,15 +30,33 @@ type: home
     <h6>ontologies: {{ packet.ontologies }}</h6>
     <h6>phenotype_profile: {{ packet.phenotype_profile }}</h6>
     <h6>entities: {{ packet.entities }}</h6>
-    <pre>{{ packet }}</pre>
+    <h6>persons: {{ packet.persons }}</h6>
+    <h6>phenotypeAssociations: {{ packet.phenotypeAssociations }}</h6>
+    <h6>evidence: {{ packet.evidence }}</h6>
+    <h6>entities: {{ packet.entities }}</h6>
+    <pre class="pre-scrollable">{{ packet }}</pre>
   </li>
 {% endfor %}
 </ul>
 
 
+<hr>
 
-<h2>Collections! We don't need no stinkin' collections.</h2>
+<h2>Using the Jekyll Collections Feature</h2>
 
+<p>
+  Jekyll allows data files such as CSV, JSON, YAML to be loaded and made available
+  to the rendering engine, where the loaded can be rendered or even computed upon.
+
+  The downside to this feature is that incorrectly formatted data files will cause
+  the build to break; so that a single error can prevent any updates from being seen.
+
+<a
+  href="https://jekyllrb.com/docs/collections/"
+  target="_blank">
+  Jekyll documentation about Collections
+</a>
+</p>
 
 {% for collection in site.collections %}
   <li>
@@ -65,7 +82,7 @@ type: home
             {{site.baseurl}}{{ doc.url }}
           </a>
         </h6>
-        <pre>
+        <pre class="pre-scrollable">
           Content:
           {{doc.content}}
         </pre>
@@ -77,8 +94,11 @@ type: home
 </ul>
 
 
+<hr>
+
+
 <h2>Packets! We don't need no stinkin' packets.</h2>
-{% for packet in site.packets.docs %}
+{% for packet in site.packetsCollection.docs %}
   <h6>
     <a
       target="_blank"
@@ -88,7 +108,20 @@ type: home
   </h6>
 {% endfor %}
 
-<h2>Phenopackets in this Pile</h2>
+<hr>
+
+<h2>Using the Jekyll static_files feature</h2>
+
+<p>
+  This is currently the most reliable way to deploy JSON/YAML content via Jekyll, because it ensures that the files are simply copied uninterpreted to their output directory. This avoids issues with Jekyll failing to interpret JSON or YAML files that have errors.
+
+<a
+  href="https://jekyllrb.com/docs/static-files/"
+  target="_blank">
+  Jekyll documentation about Data Files
+</a>
+</p>
+
 
 <ul>
 {% for packet in site.static_files %}
@@ -109,3 +142,4 @@ type: home
   {% endif %}
 {% endfor %}
 </ul>
+
