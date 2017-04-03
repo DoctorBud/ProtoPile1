@@ -38,10 +38,11 @@ type: home
         <h6>slug: {{doc.title}}</h6>
         <h6>path: {{doc.path}}</h6>
         <h6>relative_path: {{doc.relative_path}}</h6>
+        <h6>url: {{doc.url}}</h6>
         <h6>
           <a
             target="_blank"
-            href="{{site.baseurl}}{{ doc.relative_path }}">
+            href="{{site.baseurl}}/{{ doc.relative_path }}">
             {{site.baseurl}}{{ doc.relative_path }}
           </a>
         </h6>
