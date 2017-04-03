@@ -93,7 +93,7 @@ type: home
 <ul>
 {% for packet in site.static_files %}
   {% if packet.path contains "packets/" %}
-    {% if packet.extname == '.yaml' || packet.extname == '.json' %}
+    {% if packet.extname == '.yaml' or packet.extname == '.json' %}
     	<li>
     		<a
           target="_blank"
