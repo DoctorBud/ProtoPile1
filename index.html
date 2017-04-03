@@ -22,14 +22,18 @@ type: home
 <h2>Collections! We don't need no stinkin' collections.</h2>
 
 {% for collection in site.collections %}
+  <pre>
   Collection name: {{collection.label}}
   Relative path to the collection's source directory: {{collection.relative_directory }}
   Full path to the collection's directory: {{collection.directory}}
   Output collection files as individual files?: {{collection.output}}
+
+  <hr>
+
   {% for doc in collection.docs %}
-     {{doc.title}}
-    {{doc.slug}}
+    {{doc.title}} : {{doc.slug}}
   {% endfor %}
+  </pre>
 {% endfor %}
 
 
