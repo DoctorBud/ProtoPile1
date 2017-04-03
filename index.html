@@ -19,32 +19,30 @@ type: home
 
 
 
-{% comment %}
-  <h2>Collections! We don't need no stinkin' collections.</h2>
+<h2>Collections! We don't need no stinkin' collections.</h2>
 
-  {% for collection in site.collections %}
-    Collection name: {{collection.label}}
-    Relative path to the collection's source directory: {{collection.relative_directory }}
-    Full path to the collection's directory: {{collection.directory}}
-    Output collection files as individual files?: {{collection.output}}
-    {% for doc in collection.docs %}
-       {{doc.title}}
-      {{doc.slug}}
-    {% endfor %}
+{% for collection in site.collections %}
+  Collection name: {{collection.label}}
+  Relative path to the collection's source directory: {{collection.relative_directory }}
+  Full path to the collection's directory: {{collection.directory}}
+  Output collection files as individual files?: {{collection.output}}
+  {% for doc in collection.docs %}
+     {{doc.title}}
+    {{doc.slug}}
   {% endfor %}
+{% endfor %}
 
 
-  <h2>Packets! We don't need no stinkin' packets.</h2>
-  {% for packet in site.packets.docs %}
-    <h6>
-      <a
-        target="_blank"
-        href="{{site.baseurl}}{{ packet.path }}">
-        {{ packet.path }}
-      </a>
-    </h6>
-  {% endfor %}
-{% endcomment %}
+<h2>Packets! We don't need no stinkin' packets.</h2>
+{% for packet in site.packets.docs %}
+  <h6>
+    <a
+      target="_blank"
+      href="{{site.baseurl}}{{ packet.path }}">
+      {{ packet.path }}
+    </a>
+  </h6>
+{% endfor %}
 
 <h2>Phenopackets in this Pile</h2>
 
