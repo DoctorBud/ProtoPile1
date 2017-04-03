@@ -3,17 +3,16 @@ theme: jekyll-theme-cayman
 ## is an unnecessary requirement for packet submitters, so we won't use collections and will
 ## instead use the static_files feature.
 #
-# collections:
-#   packetsCollection:
-#     output: true
-#     permalink: /packetsCollection/:title/
-# defaults:
-#   - scope:
-#       path: "_packetsCollection"
-#     values:
-#       layout: "default_packets"
-#       packet: true
+collections:
+  packetsCollection:
+    output: true
+    permalink: /packetsCollection/:title/
 defaults:
+  - scope:
+      path: "_packetsCollection"
+    values:
+      layout: "default_packets"
+      packet: true
   - scope:
       path: "packets"
     values:
